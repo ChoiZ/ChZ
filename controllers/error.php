@@ -13,11 +13,11 @@ namespace controllers;
 
 use core\controller as Controller;
 
-class Home extends Controller {
+class error extends Controller {
 
     public function index() {
         parent::loadView('header.html');
-        parent::loadView('home.html');
+        parent::loadView('error.html');
         parent::loadView('footer.html');
     }
 
