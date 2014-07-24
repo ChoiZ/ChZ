@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Website</ShortName>
+  <Description>Search with Website</Description>
+  <Image width="16" height="16" type="image/x-icon">http://static.website.com/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="http://www.website.com/search?q={searchTerms}&ref=opensearch"/>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
