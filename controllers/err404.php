@@ -1,5 +1,9 @@
 <?php
 
+namespace controllers;
+
+use core\controller as Controller;
+
 class err404 extends Controller {
 
     public function index() {

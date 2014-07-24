@@ -1,5 +1,9 @@
 <?php
 
+namespace core;
+
+use controllers;
+
 class App {
 
     public function __construct() {
@@ -11,19 +15,11 @@ class App {
             $this->controller = (isset($url[0]) ? $url[0] : null);
             $this->action = (isset($url[1]) ? $url[1] : null);
         } else {
-            $this->controller = 'home';
+            $this->controller = 'controllers\\home';
         }
 
-        if (file_exists(CONTROLLER_DIR.'/'.$this->controller.'.php')) {
-            require_once CONTROLLER_DIR.'/'.$this->controller . '.php';
-            $this->object = new $this->controller();
-            $this->object->index();
-        } else {
-            require_once CONTROLLER_DIR.'/err404.php';
-            $this->header = 404;
-            $this->object = new Err404();
-            $this->object->index();
-        }
+        $this->object = new $this->controller();
+        $this->object->index();
 
     }
 
