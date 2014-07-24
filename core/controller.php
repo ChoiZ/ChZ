@@ -1,5 +1,7 @@
 <?php
 
+namespace chzphp\core;
+
 class Controller {
 
     function __construct() {

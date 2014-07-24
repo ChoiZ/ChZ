@@ -1,5 +1,9 @@
 <?php
 
+namespace chzphp\controllers;
+
+use chzphp\core\controller as Controller;
+
 class Home extends Controller {
 
     public function index() {
