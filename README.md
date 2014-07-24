@@ -21,7 +21,7 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
-* 2014-07-24 - First commit (Version 0.1)
+* 2014-07-24 - First commit (Version 0.0.1)
 
 Todo
 ----
