@@ -1,6 +1,6 @@
 <?php
 
-namespace chzphp\core;
+namespace core;
 
 class Controller {
 

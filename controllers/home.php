@@ -1,8 +1,8 @@
 <?php
 
-namespace chzphp\controllers;
+namespace controllers;
 
-use chzphp\core\controller as Controller;
+use core\controller as Controller;
 
 class Home extends Controller {
 

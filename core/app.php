@@ -1,8 +1,8 @@
 <?php
 
-namespace chzphp\core;
+namespace core;
 
-use chzphp\controllers;
+use controllers;
 
 class App {
 
@@ -15,7 +15,7 @@ class App {
             $this->controller = (isset($url[0]) ? $url[0] : null);
             $this->action = (isset($url[1]) ? $url[1] : null);
         } else {
-            $this->controller = 'chzphp\\controllers\\home';
+            $this->controller = 'controllers\\home';
         }
 
         $this->object = new $this->controller();
