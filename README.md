@@ -27,5 +27,6 @@ Todo
 ----
 
 - Router
-- Setup grunt
+- Configure grunt
 - Setup tests
+- Create tests
