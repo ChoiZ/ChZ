@@ -4,11 +4,11 @@ namespace controllers;
 
 use core\controller as Controller;
 
-class err404 extends Controller {
+class error extends Controller {
 
     public function index() {
         parent::loadView('header.html');
-        parent::loadView('err404.html');
+        parent::loadView('error.html');
         parent::loadView('footer.html');
     }
 
