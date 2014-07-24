@@ -10,8 +10,8 @@
  */
 
 define('BASE_DIR', realpath(dirname(__FILE__)));
-define('CORE_DIR', BASE_DIR.'/core');
 define('CONTROLLER_DIR', BASE_DIR.'/controllers');
+define('ENGINE_DIR', BASE_DIR.'/engine');
 define('VIEWS_DIR', BASE_DIR.'/views');
 
 function loader($class) {
@@ -29,4 +29,4 @@ function loader($class) {
 
 spl_autoload_register('loader');
 
-$app = new core\App();
+$app = new engine\App();

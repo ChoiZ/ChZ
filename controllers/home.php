@@ -11,7 +11,7 @@
 
 namespace controllers;
 
-use core\controller as Controller;
+use engine\controller as Controller;
 
 class Home extends Controller {
 
