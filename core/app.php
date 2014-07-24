@@ -14,12 +14,12 @@ class App {
             $this->controller = 'home';
         }
 
-        if (file_exists(BASE_DIR.'/controllers/'.$this->controller.'.php')) {
-            require_once BASE_DIR.'/controllers/'.$this->controller . '.php';
+        if (file_exists(CONTROLLER_DIR.'/'.$this->controller.'.php')) {
+            require_once CONTROLLER_DIR.'/'.$this->controller . '.php';
             $this->object = new $this->controller();
             $this->object->index();
         } else {
-            require_once BASE_DIR.'/controllers/err404.php';
+            require_once CONTROLLER_DIR.'/err404.php';
             $this->header = 404;
             $this->object = new Err404();
             $this->object->index();
