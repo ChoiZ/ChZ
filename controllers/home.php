@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace controllers;
+namespace Controllers;
 
-use engine\controller as Controller;
+use Engine\Controller as Controller;
 
 class Home extends Controller {
 

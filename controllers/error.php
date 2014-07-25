@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace controllers;
+namespace Controllers;
 
-use engine\controller as Controller;
+use Engine\Controller as Controller;
 
-class error extends Controller {
+class Error extends Controller {
 
     public function index() {
         parent::loadView('header.html');

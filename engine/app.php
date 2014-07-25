@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace engine;
+namespace Engine;
 
-use controllers;
+use Controllers;
 
 class App {
 
