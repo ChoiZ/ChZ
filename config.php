@@ -11,4 +11,4 @@
 
 define('WEBSITE_NAME', 'My Website');
 define('DOMAIN', 'www.website.com');
-define('STATIC_DOMAIR', 'static.website.com');
+define('STATIC_DOMAIN', 'static.website.com');
