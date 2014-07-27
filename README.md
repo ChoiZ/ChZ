@@ -21,6 +21,7 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
+* 2014-07-27 - Add grunt configuration (Version 0.0.3)
 * 2014-07-25 - Add namespaces (Version 0.0.2)
 * 2014-07-24 - First commit (Version 0.0.1)
 
@@ -28,5 +29,3 @@ Todo
 ----
 
 - Router
-- Configure grunt
-- Implement Tests

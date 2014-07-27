@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <title><?php echo WEBSITE_NAME; ?></title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Website" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
