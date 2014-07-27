@@ -16,9 +16,9 @@ use Engine\Controller as Controller;
 class Error extends Controller {
 
     public function index() {
-        parent::loadView('header.html');
-        parent::loadView('error.html');
-        parent::loadView('footer.html');
+        parent::loadView('header');
+        parent::loadView('error');
+        parent::loadView('footer');
     }
 
 }

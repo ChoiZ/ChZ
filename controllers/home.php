@@ -16,9 +16,9 @@ use Engine\Controller as Controller;
 class Home extends Controller {
 
     public function index() {
-        parent::loadView('header.html');
-        parent::loadView('home.html');
-        parent::loadView('footer.html');
+        parent::loadView('header');
+        parent::loadView('home');
+        parent::loadView('footer');
     }
 
 }
