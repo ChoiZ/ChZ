@@ -14,6 +14,8 @@ define('CONTROLLER_DIR', BASE_DIR.'/controllers');
 define('ENGINE_DIR', BASE_DIR.'/engine');
 define('VIEWS_DIR', BASE_DIR.'/views');
 
+require_once 'config.php';
+
 function loader($class) {
 
     $class = str_replace('\\', '/', $class);
