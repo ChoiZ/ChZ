@@ -17,14 +17,14 @@ class Model {
 
     }
 
-    public function getUsers() {
+    public function get() {
         $sql = '';// SELECT
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
     }
 
-    public function addUser($params) {
+    public function add($params) {
         $emall = $params->email;
 
         $sql = ''; // INSERT
@@ -32,7 +32,7 @@ class Model {
         $query->execute(array(':email'));
     }
 
-    public function editUser($params) {
+    public function edit($params) {
         $id = $params->id;
         $emall = $params->email;
 
@@ -41,7 +41,7 @@ class Model {
         $query->execute(array(':id' => $id));
     }
 
-    public function delUser($id) {
+    public function del($id) {
         $sql = ''; // DELETE
         $query = $this->db->prepare($sql);
         $query->execute(array(':id' => $id));
