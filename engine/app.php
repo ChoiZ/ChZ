@@ -29,7 +29,7 @@ class App {
         }
 
         $this->object = new $this->controller();
-        $this->object->$this->action();
+        $this->object->{$this->action}();
 
     }
 
