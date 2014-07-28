@@ -21,14 +21,15 @@ class App {
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
-            $this->controller = (isset($url[0]) ? $url[0] : null);
+            $this->controller = 'controllers\\'.(!empty($url[0]) ? $url[0] : null);
             $this->action = (isset($url[1]) ? $url[1] : null);
         } else {
-            $this->controller = 'controllers\\home';
+            $this->controller = 'Controllers\\home';
+            $this->action = 'index';
         }
 
         $this->object = new $this->controller();
-        $this->object->index();
+        $this->object->$this->action();
 
     }
 
