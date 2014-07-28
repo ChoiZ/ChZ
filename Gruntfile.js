@@ -19,6 +19,12 @@ module.exports = function (grunt) {
             staticJs: 'static/js',
         },
 
+        csslint: {
+            strict: {
+                src: ['<%= config.staticCss %>/*.css']
+            }
+        },
+
         cssmin: {
             combine: {
                 options: {
@@ -74,6 +80,6 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'csslint', 'cssmin']);
 
 };
