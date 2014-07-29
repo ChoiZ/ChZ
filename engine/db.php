@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Bundle;
+namespace Engine;
 
 class Db extends PDO {
 
