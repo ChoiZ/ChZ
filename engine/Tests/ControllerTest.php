@@ -9,6 +9,14 @@
  * file that was distributed with this source code.
  */
 
-class ControllerTest extends PHPUint_Framework_TestCase {
+class ControllerTest extends PHPUnit_Framework_TestCase {
+
+    public function test_loadView() {
+
+        $view = new Engine\Controller();
+
+        $this->assertTrue($view->loadView('home'));
+
+    }
 
 }

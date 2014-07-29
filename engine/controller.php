@@ -19,6 +19,7 @@ class Controller {
 
     public function loadView($file) {
         require_once VIEWS_DIR.'/'.$file.'.php';
+        return true;
     }
 
 }

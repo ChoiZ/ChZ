@@ -9,6 +9,12 @@
  * file that was distributed with this source code.
  */
 
-class AppTest extends PHPUint_Framework_TestCase {
+class AppTest extends PHPUnit_Framework_TestCase {
+
+    public function test_true() {
+
+        $this->assertTrue(true);
+
+    }
 
 }
