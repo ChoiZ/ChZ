@@ -11,25 +11,22 @@
 
 namespace Engine;
 
-use Controllers;
+use Engine\Route as Route;
 
 class App {
 
     public function __construct() {
 
-        if (isset($_GET['url'])) {
-            $url = rtrim($_GET['url'], '/');
-            $url = filter_var($url, FILTER_SANITIZE_URL);
-            $url = explode('/', $url);
-            $this->controller = 'Controllers\\'.(!empty($url[0]) ? $url[0] : null);
-            $this->action = (isset($url[1]) ? $url[1] : null);
-        } else {
-            $this->controller = 'Controllers\\home';
-            $this->action = 'index';
-        }
+        $route = Route::getInstance();
+        $url = !empty($_GET['url']) ? $_GET['url'] : '/';
+        $route->setRoute($url);
 
-        $this->object = new $this->controller();
-        $this->object->{$this->action}();
+        $controller = $route->getNamespace().$route->getController();
+        $action = $route->getAction();
+        $params = $route->getParams();
+
+        $this->object = new $controller;
+        $this->object->$action($params);
 
     }
 
