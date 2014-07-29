@@ -29,5 +29,3 @@ Todo
 ----
 
 - Router
-- Setup tests
-- Create tests

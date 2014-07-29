@@ -9,17 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Engine;
+class AppTest extends PHPUnit_Framework_TestCase {
 
-class Controller {
+    public function test_true() {
 
-    function __construct() {
+        $this->assertTrue(true);
 
-    }
-
-    public function loadView($file) {
-        require_once VIEWS_DIR.'/'.$file.'.php';
-        return true;
     }
 
 }

@@ -9,17 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Engine;
+class ControllerTest extends PHPUnit_Framework_TestCase {
 
-class Controller {
+    public function test_loadView() {
 
-    function __construct() {
+        $view = new Engine\Controller();
 
-    }
+        $this->assertTrue($view->loadView('home'));
 
-    public function loadView($file) {
-        require_once VIEWS_DIR.'/'.$file.'.php';
-        return true;
     }
 
 }
