@@ -11,10 +11,9 @@
 
 class AppTest extends PHPUnit_Framework_TestCase {
 
-    public function test_true() {
-
-        $this->assertTrue(true);
-
+    public function test_Construct() {
+        $app = new Engine\App();
+        $this->assertTrue(get_class($app->object) === 'Controllers\\Home');
     }
 
 }
