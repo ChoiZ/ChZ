@@ -19,6 +19,25 @@ module.exports = function (grunt) {
             staticJs: 'static/js',
         },
 
+        phplint: {
+            options: {
+                phpCmd: "/usr/bin/php",
+                phpArgs: {
+                    "-l": null
+                },
+                spawnLimit: 10
+            },
+
+            bootstrap: ["bootstrap.php"],
+            bundle: ["bundle/*.php"],
+            controllers: ["controllers/*.php"],
+            engine: ["engine/*.php"],
+            engineTests: ["engine/Tests/*.php"],
+            models: ["models/*.php"],
+            public: ["public/*.php"],
+            views: ["views/*.php"],
+        },
+
         csslint: {
             strict: {
                 src: ['<%= config.staticCss %>/*.css']

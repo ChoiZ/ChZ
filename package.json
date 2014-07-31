@@ -23,6 +23,8 @@
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-htmlmin": "~0.3.0",
     "grunt-htmlhint": "~0.4.1",
-    "matchdep": "~0.3.0"
+    "matchdep": "~0.3.0",
+    "grunt-phpunit": "~0.3.4",
+    "grunt-phplint": "0.0.5"
   }
 }
