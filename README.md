@@ -21,6 +21,7 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
+* 2014-07-31 - Add grunt-phplint (Version 0.0.6)
 * 2014-07-29 - Add route (Version 0.0.5)
 * 2014-07-28 - Add tests (Version 0.0.4)
 * 2014-07-27 - Add grunt configuration (Version 0.0.3)
