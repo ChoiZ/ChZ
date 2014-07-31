@@ -21,21 +21,21 @@ module.exports = function (grunt) {
 
         phplint: {
             options: {
-                phpCmd: "/usr/bin/php",
+                phpCmd: '/usr/bin/php',
                 phpArgs: {
-                    "-l": null
+                    '-l': null
                 },
                 spawnLimit: 10
             },
 
-            bootstrap: ["bootstrap.php"],
-            bundle: ["bundle/*.php"],
-            controllers: ["controllers/*.php"],
-            engine: ["engine/*.php"],
-            engineTests: ["engine/Tests/*.php"],
-            models: ["models/*.php"],
-            public: ["public/*.php"],
-            views: ["views/*.php"],
+            bootstrap: ['bootstrap.php'],
+            bundle: ['bundle/*.php'],
+            controllers: ['controllers/*.php'],
+            engine: ['engine/*.php'],
+            engineTests: ['engine/Tests/*.php'],
+            models: ['models/*.php'],
+            public: ['public/*.php'],
+            views: ['views/*.php'],
         },
 
         csslint: {
@@ -47,10 +47,10 @@ module.exports = function (grunt) {
         cssmin: {
             combine: {
                 options: {
-                    'banner': '/* <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today(\'yyyy-mm-dd\') %> */\n',
+                    'banner': '/* <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today(\'yyyy-mm-dd\') %> */',
                 },
                 files: {
-                    '<%= config.staticCss %>/min/script.css': ['<%= config.staticCss %>/*.css']
+                    '<%= config.staticCss %>/min/styles.css': ['<%= config.staticCss %>/*.css']
                 }
             }
         },
@@ -99,6 +99,6 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'csslint', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'csslint', 'cssmin', 'phplint']);
 
 };
