@@ -9,12 +9,9 @@
  * file that was distributed with this source code.
  */
 
-define('BASE_DIR', realpath(dirname(__FILE__)));
-define('CONTROLLER_DIR', BASE_DIR.'/controllers');
-define('ENGINE_DIR', BASE_DIR.'/engine');
-define('VIEWS_DIR', BASE_DIR.'/views');
-
 require_once 'config.php';
+
+date_default_timezone_set(TIMEZONE);
 
 function loader($class) {
 
