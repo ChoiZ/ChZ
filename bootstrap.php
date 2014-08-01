@@ -11,6 +11,11 @@
 
 require_once 'config.php';
 
+ini_set('default_charset', ENCODING);
+ini_set('php.input_encoding', ENCODING);
+ini_set('php.internal_encoding', ENCODING);
+ini_set('php.output_encoding', ENCODING);
+
 date_default_timezone_set(TIMEZONE);
 
 function loader($class) {

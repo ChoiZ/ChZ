@@ -15,7 +15,7 @@ define('DOMAIN', 'www.website.com');
 define('STATIC_DOMAIN', 'static.website.com');
 
 // Encoding, Lang, Timezone
-define('ENCODING', 'utf-8');
+define('ENCODING', 'UTF-8');
 define('LANG', 'fr_FR');
 define('TIMEZONE', 'Europe/Paris');
 
