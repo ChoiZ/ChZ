@@ -38,6 +38,17 @@ module.exports = function (grunt) {
             views: ['views/*.php'],
         },
 
+        phpunit: {
+            classes: {
+                dir: 'engine/Tests',
+            },
+            options: {
+                bin: '/usr/local/bin/phpunit',
+                bootstrap: 'bootstrap.php',
+                colors: true
+            }
+        },
+
         csslint: {
             strict: {
                 src: ['<%= config.staticCss %>/*.css']
