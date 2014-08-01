@@ -110,6 +110,6 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'csslint', 'cssmin', 'phplint']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'csslint', 'cssmin', 'phplint', 'phpunit']);
 
 };
