@@ -1,9 +1,11 @@
 ChZ-PHP
 =======
 
-A smart, lightweight and easy to use PHP MVC skeleton. Easy to understand and to setup, fully personalizable.
+A smart, lightweight and easy to use PHP MVC skeleton.
+Easy to understand and to setup, fully personalizable.
 
-Models Views Controllers, html5, css, javascript, bootstrap, public folder.
+This framework use: HTML5, CSS, Javascript, Grunt, PHPUnit, jshint, csslint and minifiers.
+Also you have a public folder with a robot.txt and opensearch.xml (add your favicon and apple-touch-icon-* in this folder).
 
 Requirements
 ---------
