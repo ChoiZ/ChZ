@@ -24,6 +24,7 @@ define('DB_SERVER', 'localhost');
 define('DB_NAME', 'dbname');
 define('DB_USER', 'user');
 define('DB_PASS', 'password');
+define('DB_ENCODING', 'UTF8');
 
 // Folders informations
 define('BASE_DIR', realpath(__DIR__));

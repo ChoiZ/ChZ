@@ -11,6 +11,9 @@
 
 namespace Engine;
 
+use \PDO as PDO;
+use \PDOException as PDOException;
+
 class Db extends PDO {
 
     const FETCH_ASSOC = PDO::FETCH_ASSOC;
@@ -23,18 +26,14 @@ class Db extends PDO {
 
     private static $instance;
 
-    public static function getInstance() {
+    public function __construct() {
 
         if (!isset(self::$instance)) {
             try {
-                self::$instance = new PDO('mysql:host='.DB_SERVER.';dbname'.DB_NAME, DB_USER, DB_PASS,
-                    array(
-                        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'.ENCODING.\'',
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-                    )
-                );
+                self::$instance = new PDO('mysql:host='.DB_SERVER.';dbname='.DB_NAME, DB_USER, DB_PASS,
+                    array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES '.DB_ENCODING, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             } catch (PDOException $e) {
-                die('Database error.');
+                die('Connection error: '.$e->getMessage());
             }
         }
 
@@ -42,9 +41,13 @@ class Db extends PDO {
 
     }
 
-    public function query($query) {
+    public static function getInstance() {
 
-        return self::$instance->query($query);
+        if (!isset(self::$instance)) {
+            new Db();
+        }
+
+        return self::$instance;
 
     }
 
