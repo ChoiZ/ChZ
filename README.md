@@ -28,8 +28,8 @@ All issues or pull requests must be submitted through GitHub.
 Todo
 ---------
 
-Add an easy setup.
-Add an easy update too.
+* Add an easy setup.
+* Add an easy update too.
 
 ChangeLog
 ---------
