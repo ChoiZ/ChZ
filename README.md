@@ -10,7 +10,7 @@ Also you have a public folder with a robot.txt and opensearch.xml (add your favi
 Setup
 ---------
 
-Copy config.php.dist to config.php and edit it.
+Copy `config.php.dist` to `config.php` and edit it.
 
 Requirements
 ---------
@@ -24,6 +24,12 @@ All issues or pull requests must be submitted through GitHub.
 
 * To report an issue or a feature request, please use [GitHub Issues](https://github.com/ChoiZ/ChZ-PHP/issues).
 * To make a pull request, please create a new branch for each feature or issue.
+
+Todo
+---------
+
+Add an easy setup.
+Add an easy update too.
 
 ChangeLog
 ---------
