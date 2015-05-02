@@ -34,7 +34,7 @@ class Model {
 
     public function edit($params) {
         $id = $params->id;
-        $emall = $params->email;
+        $email = $params->email;
 
         $sql = ''; //UPDATE
         $query = $this->db->prepare($sql);
