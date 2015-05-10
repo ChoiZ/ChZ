@@ -13,20 +13,22 @@ namespace Models;
 
 use Models\Model as Model;
 
-class User extends Model {
-
-    public function __construct() {
-
+class User extends Model
+{
+    public function __construct()
+    {
     }
 
-    public function getUsers() {
+    public function get()
+    {
         $sql = "SELECT `id`, `email`, `firstname`, `lastname` FROM `user`;";
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
     }
 
-    public function addUser($params) {
+    public function add($params)
+    {
         $emall = $params->email;
         $firstname = $params->firstname;
         $lastname = $params->lastname;
@@ -36,7 +38,8 @@ class User extends Model {
         $query->execute(array(':email' => $email, ':firstname' => $firstname, ':lastname' => $lastname));
     }
 
-    public function editUser($params) {
+    public function edit($params)
+    {
         $id = $params->id;
         $emall = $params->email;
         $firstname = $params->firstname;
@@ -47,10 +50,10 @@ class User extends Model {
         $query->execute(array(':id' => $id, ':email' => $email, ':firstname' => $firstname, ':lastname' => $lastname));
     }
 
-    public function delUser($id) {
+    public function del($id)
+    {
         $sql = "DELETE FROM `user` WHERE `id` = :id LIMIT 1;";
         $query = $this->db->prepare($sql);
         $query->execute(array(':id' => $id));
     }
-
 }

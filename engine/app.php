@@ -13,10 +13,10 @@ namespace Engine;
 
 use Engine\Route as Route;
 
-class App {
-
-    public function __construct() {
-
+class App
+{
+    public function __construct()
+    {
         $route = Route::getInstance();
         $url = !empty($_GET['url']) ? $_GET['url'] : '/';
         $route->setRoute($url);
@@ -27,7 +27,5 @@ class App {
 
         $this->object = new $controller;
         $this->object->$action($params);
-
     }
-
 }

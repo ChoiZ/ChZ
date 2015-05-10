@@ -11,20 +11,22 @@
 
 namespace Models;
 
-class Model {
-
-    public function __construct() {
-
+class Model
+{
+    public function __construct()
+    {
     }
 
-    public function get() {
+    public function get()
+    {
         $sql = '';// SELECT
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
     }
 
-    public function add($params) {
+    public function add($params)
+    {
         $emall = $params->email;
 
         $sql = ''; // INSERT
@@ -32,7 +34,8 @@ class Model {
         $query->execute(array(':email'));
     }
 
-    public function edit($params) {
+    public function edit($params)
+    {
         $id = $params->id;
         $emall = $params->email;
 
@@ -41,10 +44,10 @@ class Model {
         $query->execute(array(':id' => $id));
     }
 
-    public function del($id) {
+    public function del($id)
+    {
         $sql = ''; // DELETE
         $query = $this->db->prepare($sql);
         $query->execute(array(':id' => $id));
     }
-
 }

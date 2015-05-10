@@ -13,12 +13,12 @@ namespace Controllers;
 
 use Engine\Controller as Controller;
 
-class Error extends Controller {
-
-    public function index() {
+class Error extends Controller
+{
+    public function index()
+    {
         parent::loadView('header');
         parent::loadView('error');
         parent::loadView('footer');
     }
-
 }

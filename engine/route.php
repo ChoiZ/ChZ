@@ -11,8 +11,8 @@
 
 namespace Engine;
 
-class Route {
-
+class Route
+{
     private static $instance;
 
     public $lang;
@@ -22,7 +22,8 @@ class Route {
     public $action;
     public $params;
 
-    function __construct() {
+    function __construct()
+    {
         $this->route = null;
         $this->namespace = 'controllers\\';
         $this->controller = 'home';
@@ -30,8 +31,8 @@ class Route {
         $this->params = array();
     }
 
-    public static function getInstance() {
-
+    public static function getInstance()
+    {
         if (!isset(self::$instance)) {
             self::$instance = new Route();
         }
@@ -39,8 +40,8 @@ class Route {
         return self::$instance;
     }
 
-    public function setRoute($route) {
-
+    public function setRoute($route)
+    {
         if (substr($route, -1) === '/' && strlen($route) > 1) {
             $route = rtrim($route, '/');
         }
@@ -74,23 +75,25 @@ class Route {
         if (!empty($path)) {
             $this->params = $path;
         }
-
     }
 
-    public function getNamespace() {
+    public function getNamespace()
+    {
         return $this->namespace;
     }
 
-    public function getController() {
+    public function getController()
+    {
         return $this->controller;
     }
 
-    public function getAction() {
+    public function getAction()
+    {
         return $this->action;
     }
 
-    public function getParams() {
+    public function getParams()
+    {
         return $this->params;
     }
-
 }

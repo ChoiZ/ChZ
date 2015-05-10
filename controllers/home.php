@@ -13,12 +13,12 @@ namespace Controllers;
 
 use Engine\Controller as Controller;
 
-class Home extends Controller {
-
-    public function index() {
+class Home extends Controller
+{
+    public function index()
+    {
         parent::loadView('header');
         parent::loadView('home');
         parent::loadView('footer');
     }
-
 }
