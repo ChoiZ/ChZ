@@ -56,9 +56,14 @@ class Route
 
         $route_json = json_decode(file_get_contents(ROUTE_FILE), true);
 
-        if (isset($route_json[$this->route])) {
-            $controller = $route_json[$this->route];
+        if (isset($route_json[$route])) {
+            $controller = $route_json[$route]['controller'];
             $this->controller = $controller;
+
+            if (isset($route_json[$route]['action'])) {
+                $action = $route_json[$route]['action'];
+                $this->action = $action;
+            }
         } else if (!empty($path[0])) {
             $controller = $path[0];
 
@@ -72,6 +77,7 @@ class Route
         array_shift($path);
 
         if (
+            $this->action == 'index' &&
             !empty($path[0]) &&
             in_array($path[0], get_class_methods($namespace.$controller))
         ) {
