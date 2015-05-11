@@ -46,6 +46,8 @@ class Cache
             return false;
         }
 
+        $this->cache =& new \memcache;
+
         foreach ($this->servers as $server) {
             $ex = explode(':', $server);
 
