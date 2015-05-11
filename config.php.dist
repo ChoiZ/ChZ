@@ -9,6 +9,12 @@
  * file that was distributed with this source code.
  */
 
+// Config version
+define('CONFIG', 1);
+
+// Env: prod, preprod, dev
+define('ENV', 'prod');
+
 // Website name, domains
 define('WEBSITE_NAME', 'My Website');
 define('DOMAIN', 'www.website.com');

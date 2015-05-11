@@ -9,7 +9,18 @@
  * file that was distributed with this source code.
  */
 
-require_once 'config.php';
+if (!file_exists(__DIR__.'/config.php')) {
+    exit('Missing config file!');
+}
+
+require_once __DIR__.'/config.php';
+
+$config_dist = file_get_contents(__DIR__.'/config.php.dist');
+preg_match("/CONFIG', (.*)\)/", $config_dist, $version);
+
+if (CONFIG != $version[1]) {
+    exit('Config is not up to date!');
+}
 
 ini_set('default_charset', ENCODING);
 ini_set('php.input_encoding', ENCODING);
