@@ -17,6 +17,7 @@ class Error extends Controller
 {
     public function index()
     {
+        header("HTTP/1.0 404 Not Found");
         parent::loadView('header');
         parent::loadView('error');
         parent::loadView('footer');
