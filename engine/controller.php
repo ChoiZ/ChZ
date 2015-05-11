@@ -13,11 +13,11 @@ namespace Engine;
 
 class Controller
 {
-    function __construct()
+    public function __construct()
     {
     }
 
-    protected function loadView($file)
+    protected function loadView($file, $params = array())
     {
         require_once VIEWS_DIR.'/'.$file.'.php';
         return true;
