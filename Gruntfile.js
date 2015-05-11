@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                 dir: 'engine/Tests',
             },
             options: {
-                bin: '/usr/local/bin/phpunit',
+                bin: '/usr/bin/phpunit',
                 bootstrap: 'bootstrap.php',
                 colors: true
             }
