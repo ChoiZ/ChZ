@@ -22,7 +22,7 @@ class Route
     public $action;
     public $params;
 
-    function __construct()
+    public function __construct()
     {
         $this->route = null;
         $this->namespace = 'controllers\\';
@@ -51,29 +51,37 @@ class Route
         }
 
         $this->route = $route;
+        $namespace = $this->namespace;
         $path = explode('/', $route);
 
-        if (!empty($path[0])) {
+        $route_json = json_decode(file_get_contents(ROUTE_FILE), true);
 
-            $namespace = $this->namespace;
+        if (isset($route_json[$this->route])) {
+            $controller = $route_json[$this->route];
+            $this->controller = $controller;
+        } else if (!empty($path[0])) {
             $controller = $path[0];
-            array_shift($path);
 
             if (class_exists($namespace.$controller)) {
                 $this->controller = $controller;
             } else {
                 $this->controller = 'error';
             }
-
         }
 
-        if (!empty($path[0]) && in_array($path[0], get_class_methods($this->namespace.$this->controller))) {
+        array_shift($path);
+
+        if (
+            !empty($path[0]) &&
+            in_array($path[0], get_class_methods($namespace.$controller))
+        ) {
             $this->action = $path[0];
             array_shift($path);
         }
 
         if (!empty($path)) {
             $this->params = $path;
+            $this->params['id'] = $path[0]; // must be update
         }
     }
 
