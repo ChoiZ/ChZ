@@ -17,9 +17,16 @@ class Controller
     {
     }
 
-    public function loadView($file)
+    protected function loadView($file)
     {
         require_once VIEWS_DIR.'/'.$file.'.php';
+        return true;
+    }
+
+    protected function loadAjax($params = array())
+    {
+        header('Content-Type: application/json');
+        echo json_encode($params, true);
         return true;
     }
 }
