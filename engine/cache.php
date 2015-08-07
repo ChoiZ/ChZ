@@ -19,14 +19,12 @@ class Cache
         "localhost"
     );
     private $expire;
-    private $flag;
     private $prefix;
 
     public function __construct($name)
     {
         $name = strtoupper($name);
         $this->expire = 3600;
-        $this->flag = false;
         $this->prefix = $name.'_';
 
         if ($name === 'GEOIP') {
@@ -46,7 +44,7 @@ class Cache
             return false;
         }
 
-        $this->cache =& new \memcache;
+        $this->cache =& new \memcached;
 
         foreach ($this->servers as $server) {
             $ex = explode(':', $server);
@@ -87,7 +85,7 @@ class Cache
             $expire = $this->expire;
         }
 
-        return $this->cache->set($this->prefix.$key, $val, $this->flag, $expire);
+        return $this->cache->set($this->prefix.$key, $val, $expire);
     }
 
     public function get($key)
@@ -105,6 +103,6 @@ class Cache
             return false;
         }
 
-        return $this->cache->set($this->prefix.$key, NULL, $this->flag, 1);
+        return $this->cache->set($this->prefix.$key, NULL, 1);
     }
 }
