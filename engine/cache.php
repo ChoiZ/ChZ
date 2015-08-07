@@ -16,7 +16,7 @@ class Cache
     private $cache = NULL;
     private $connected = false;
     private $servers = array(
-        "localhost"
+        array("localhost", 11211)
     );
     private $expire;
     private $prefix;
@@ -44,24 +44,10 @@ class Cache
             return false;
         }
 
-        $this->cache =& new \memcached;
+        $this->cache = new \memcached;
 
-        foreach ($this->servers as $server) {
-            $ex = explode(':', $server);
-
-            if (isset($ex[0]) && $ex[0]) {
-                $host = $ex[0];
-            }
-
-            if (isset($ex[1]) && $ex[1]) {
-                $port = $ex[1];
-            } else {
-                $port = '11211';
-            }
-
-            if ($this->cache->addServer($host, $port)) {
-                $this->connected = true;
-            }
+        if ($this->cache->addServer($this->servers)) {
+            $this->connected = true;
         }
 
         return $this->connected;
