@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Engine;
+namespace ChZ\Engine;
 
 use \PDO as PDO;
 use \PDOException as PDOException;

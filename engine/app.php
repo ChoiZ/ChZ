@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Engine;
+namespace ChZ\Engine;
 
-use Engine\Route as Route;
+use ChZ\Engine\Route as Route;
 
 class App
 {

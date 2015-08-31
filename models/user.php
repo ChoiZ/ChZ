@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Models;
+namespace ChZ\Models;
 
-use Models\Model as Model;
-use Engine\Db as DB;
-use Engine\Cache as Cache;
+use ChZ\Models\Model as Model;
+use ChZ\Engine\Db as DB;
+use ChZ\Engine\Cache as Cache;
 
 class User extends Model
 {

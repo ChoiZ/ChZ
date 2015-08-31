@@ -44,4 +44,4 @@ function loader($class)
 }
 spl_autoload_register('loader');
 
-$app = new Engine\App();
+$app = new ChZ\Engine\App();
