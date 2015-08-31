@@ -1,5 +1,19 @@
 {
     "name": "ChoiZ/ChZ",
+    "description": "",
+    "keywords": ["php","framework"],
+    "homepage": "https://github.com/ChoiZ/ChZ",
+    "license": "MIT",
     "version": "1.0.0",
-    "php": ">=5.4.0",
+    "authors": [
+        {
+            "name": "François LASSERRE",
+            "email": "choiz@me.com",
+            "homepage": "http://www.choiz.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    }
 }
