@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is a part of the ChZ-PHP package.
+ * This file is a part of the ChZ package.
  *
  * (c) François LASSERRE <choiz@me.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Engine;
+namespace ChZ\Engine;
 
-use Engine\Route as Route;
+use ChZ\Engine\Route as Route;
 
 class App
 {

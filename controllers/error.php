@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is a part of the ChZ-PHP package.
+ * This file is a part of the ChZ package.
  *
  * (c) François LASSERRE <choiz@me.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Controllers;
+namespace ChZ\Controllers;
 
-use Engine\Controller as Controller;
+use ChZ\Engine\Controller as Controller;
 
 class Error extends Controller
 {

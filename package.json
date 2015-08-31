@@ -1,17 +1,17 @@
 {
-  "name": "ChZ-PHP",
+  "name": "ChZ",
   "version": "0.0.1",
-  "description": "ChZ-PHP",
+  "description": "ChZ",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChoiZ/ChZ-PHP.git"
+    "url": "https://github.com/ChoiZ/ChZ.git"
   },
   "author": "François LASSERRE",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChoiZ/ChZ-PHP/issues"
+    "url": "https://github.com/ChoiZ/ChZ/issues"
   },
-  "homepage": "https://github.com/ChoiZ/ChZ-PHP",
+  "homepage": "https://github.com/ChoiZ/ChZ",
   "devDependencies": {
     "load-grunt-tasks": "~0.6.0",
     "time-grunt": "~0.4.0",

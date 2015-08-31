@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is a part of the ChZ-PHP package.
+ * This file is a part of the ChZ package.
  *
  * (c) François LASSERRE <choiz@me.com>
  *
@@ -9,11 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Models;
+namespace ChZ\Models;
 
 class Model
 {
-
     public function __construct()
     {
     }
@@ -33,5 +32,4 @@ class Model
     public function del($id)
     {
     }
-
 }

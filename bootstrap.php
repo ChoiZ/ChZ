@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is a part of the ChZ-PHP package.
+ * This file is a part of the ChZ package.
  *
  * (c) François LASSERRE <choiz@me.com>
  *
@@ -44,4 +44,4 @@ function loader($class)
 }
 spl_autoload_register('loader');
 
-$app = new Engine\App();
+$app = new ChZ\Engine\App();

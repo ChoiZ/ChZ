@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is a part of the ChZ-PHP package.
+ * This file is a part of the ChZ package.
  *
  * (c) François LASSERRE <choiz@me.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Models;
+namespace ChZ\Models;
 
-use Models\Model as Model;
-use Engine\Db as DB;
-use Engine\Cache as Cache;
+use ChZ\Models\Model as Model;
+use ChZ\Engine\Db as DB;
+use ChZ\Engine\Cache as Cache;
 
 class User extends Model
 {
