@@ -25,12 +25,6 @@ All issues or pull requests must be submitted through GitHub.
 * To report an issue or a feature request, please use [GitHub Issues](https://github.com/ChoiZ/ChZ/issues).
 * To make a pull request, please create a new branch for each feature or issue.
 
-Todo
----------
-
-* Add an easy setup.
-* Add an easy update too.
-
 ChangeLog
 ---------
 
