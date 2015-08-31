@@ -1,5 +1,5 @@
 /*
- * This file is a part of the ChZ-PHP package.
+ * This file is a part of the ChZ package.
  *
  * (c) François LASSERRE <choiz@me.com>
  *
