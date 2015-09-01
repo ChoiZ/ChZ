@@ -10,7 +10,7 @@ Also you have a public folder with a robot.txt and opensearch.xml (add your favi
 Setup
 ---------
 
-Copy `config.php.dist` to `config.php` and edit it.
+Soon a new setup with composer.
 
 Requirements
 ---------
@@ -28,7 +28,7 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
-* 2014-08-31 - Add package.json (Version 1.0.0)
+* 2014-08-31 - Add composer.json (Version 1.0.0)
 * 2014-08-04 - Update PDO class (Version 0.0.8)
 * 2014-07-31 - Add grunt-phpunit (Version 0.0.7)
 * 2014-07-31 - Add grunt-phplint (Version 0.0.6)
