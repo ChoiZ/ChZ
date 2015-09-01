@@ -1,10 +1,10 @@
 {
     "name": "choiz/chz",
     "description": "",
+    "type": "project",
     "keywords": ["php","framework"],
     "homepage": "https://github.com/ChoiZ/ChZ",
     "license": "MIT",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "François LASSERRE",
