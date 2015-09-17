@@ -46,7 +46,7 @@ class Cache
 
         $this->cache = new \memcached;
 
-        if ($this->cache->addServer($this->servers)) {
+        if ($this->cache->addServers($this->servers)) {
             $this->connected = true;
         }
 
