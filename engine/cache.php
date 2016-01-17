@@ -16,7 +16,7 @@ class Cache
     private $cache = NULL;
     private $connected = false;
     private $servers = array(
-        array("localhost", 11211)
+        array('localhost', 11211)
     );
     private $expire;
     private $prefix;
@@ -38,7 +38,7 @@ class Cache
         self::connect();
     }
 
-    public function connect()
+    private function connect()
     {
         if (defined('DISABLE_CACHE')) {
             return false;
@@ -53,7 +53,7 @@ class Cache
         return $this->connected;
     }
 
-    function set($key, $val, $expire = NULL)
+    private function set($key, $val, $expire = NULL)
     {
         if (defined('DISABLE_CACHE') || !$this->connected) {
             return false;
@@ -74,7 +74,7 @@ class Cache
         return $this->cache->set($this->prefix.$key, $val, $expire);
     }
 
-    public function get($key)
+    private function get($key)
     {
         if (defined('DISABLE_CACHE') || !$this->connected) {
             return false;
@@ -83,7 +83,7 @@ class Cache
         return $this->cache->get($this->prefix.$key);
     }
 
-    public function delete($key)
+    private function delete($key)
     {
         if (defined('DISABLE_CACHE') || !$this->connected) {
             return false;
