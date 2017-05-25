@@ -9,11 +9,6 @@ Easy to understand and to setup, fully personalizable.
 This framework use: HTML5, CSS, Javascript, Grunt, PHPUnit, jshint, csslint and minifiers.
 Also you have a public folder with a robot.txt and opensearch.xml (add your favicon and apple-touch-icon-* in this folder).
 
-Setup
----------
-
-Soon a new setup with composer.
-
 Requirements
 ---------
 
