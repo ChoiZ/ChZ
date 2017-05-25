@@ -1,6 +1,8 @@
 ChZ
 ===
 
+[DEPRECATED]
+
 A smart, lightweight and easy to use PHP MVC skeleton.
 Easy to understand and to setup, fully personalizable.
 
